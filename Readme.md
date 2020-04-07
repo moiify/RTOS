@@ -1,3 +1,3 @@
 # 简介
 
-本仓库存放各类RTOS的实战程序。不同种类的RTOS以其名字对应不同的分支。
+OSAL/SampleProject分支存放基于STM32F1的OSAL最小工程

@@ -1,0 +1,194 @@
+###############################################################################
+#
+# IAR ELF Linker V8.32.3.193/W32 for ARM                  09/Mar/2020  20:15:52
+# Copyright 2007-2019 IAR Systems AB.
+#
+#    Output file  =  
+#        D:\WorkSpace\IARARMWorkspace\0305SimpleF1Project\Debug\Exe\SimTem.out
+#    Map file     =  
+#        D:\WorkSpace\IARARMWorkspace\0305SimpleF1Project\Debug\List\SimTem.map
+#    Command line =  
+#        -f C:\Users\MOIIFY\AppData\Local\Temp\EW17D0.tmp
+#        (D:\WorkSpace\IARARMWorkspace\0305SimpleF1Project\Debug\Obj\main.o
+#        D:\WorkSpace\IARARMWorkspace\0305SimpleF1Project\Debug\Obj\stm32f10x_adc.o
+#        D:\WorkSpace\IARARMWorkspace\0305SimpleF1Project\Debug\Obj\stm32f10x_bkp.o
+#        D:\WorkSpace\IARARMWorkspace\0305SimpleF1Project\Debug\Obj\stm32f10x_can.o
+#        D:\WorkSpace\IARARMWorkspace\0305SimpleF1Project\Debug\Obj\stm32f10x_cec.o
+#        D:\WorkSpace\IARARMWorkspace\0305SimpleF1Project\Debug\Obj\stm32f10x_crc.o
+#        D:\WorkSpace\IARARMWorkspace\0305SimpleF1Project\Debug\Obj\stm32f10x_dac.o
+#        D:\WorkSpace\IARARMWorkspace\0305SimpleF1Project\Debug\Obj\stm32f10x_dbgmcu.o
+#        D:\WorkSpace\IARARMWorkspace\0305SimpleF1Project\Debug\Obj\stm32f10x_dma.o
+#        D:\WorkSpace\IARARMWorkspace\0305SimpleF1Project\Debug\Obj\stm32f10x_exti.o
+#        D:\WorkSpace\IARARMWorkspace\0305SimpleF1Project\Debug\Obj\stm32f10x_flash.o
+#        D:\WorkSpace\IARARMWorkspace\0305SimpleF1Project\Debug\Obj\stm32f10x_fsmc.o
+#        D:\WorkSpace\IARARMWorkspace\0305SimpleF1Project\Debug\Obj\stm32f10x_gpio.o
+#        D:\WorkSpace\IARARMWorkspace\0305SimpleF1Project\Debug\Obj\stm32f10x_i2c.o
+#        D:\WorkSpace\IARARMWorkspace\0305SimpleF1Project\Debug\Obj\stm32f10x_it.o
+#        D:\WorkSpace\IARARMWorkspace\0305SimpleF1Project\Debug\Obj\stm32f10x_iwdg.o
+#        D:\WorkSpace\IARARMWorkspace\0305SimpleF1Project\Debug\Obj\stm32f10x_pwr.o
+#        D:\WorkSpace\IARARMWorkspace\0305SimpleF1Project\Debug\Obj\stm32f10x_rcc.o
+#        D:\WorkSpace\IARARMWorkspace\0305SimpleF1Project\Debug\Obj\stm32f10x_rtc.o
+#        D:\WorkSpace\IARARMWorkspace\0305SimpleF1Project\Debug\Obj\stm32f10x_sdio.o
+#        D:\WorkSpace\IARARMWorkspace\0305SimpleF1Project\Debug\Obj\stm32f10x_spi.o
+#        D:\WorkSpace\IARARMWorkspace\0305SimpleF1Project\Debug\Obj\stm32f10x_tim.o
+#        D:\WorkSpace\IARARMWorkspace\0305SimpleF1Project\Debug\Obj\stm32f10x_usart.o
+#        D:\WorkSpace\IARARMWorkspace\0305SimpleF1Project\Debug\Obj\stm32f10x_wwdg.o
+#        D:\WorkSpace\IARARMWorkspace\0305SimpleF1Project\Debug\Obj\system_stm32f10x.o
+#        --no_out_extension -o
+#        D:\WorkSpace\IARARMWorkspace\0305SimpleF1Project\Debug\Exe\SimTem.out
+#        --map
+#        D:\WorkSpace\IARARMWorkspace\0305SimpleF1Project\Debug\List\SimTem.map
+#        --config "D:\Program Files (x86)\IAR Systems\Embedded Workbench
+#        8.2\arm\config\linker\ST\stm32f103xE.icf" --semihosting --entry
+#        __iar_program_start --vfe --text_out locale)
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor       = *
+__SystemLibrary = DLib
+__dlib_version  = 6
+
+
+*******************************************************************************
+*** HEAP SELECTION
+***
+
+The basic heap was selected because no calls to memory allocation
+functions were found in the application outside of system library
+functions, and there are calls to deallocation functions in the
+application.
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A0":  place at 0x800'0000 { ro section .intvec };
+"P1":  place in [from 0x800'0000 to 0x807'ffff] { ro };
+define block CSTACK with size = 4K, alignment = 8 { };
+define block HEAP with size = 4K, alignment = 8 { };
+"P2":  place in [from 0x2000'0000 to 0x2000'ffff] {
+          rw, block CSTACK, block HEAP };
+
+No sections matched the following patterns:
+
+  rw  in "P2"
+
+
+  Section   Kind         Address    Size  Object
+  -------   ----         -------    ----  ------
+"A0":                               0x40
+  .intvec   ro code   0x800'0000    0x40  vector_table_M.o [3]
+                    - 0x800'0040    0x40
+
+"P1":                               0x64
+  .text     ro code   0x800'0040    0x1e  cmain.o [3]
+  .text     ro code   0x800'005e     0x4  low_level_init.o [2]
+  .text     ro code   0x800'0062     0x2  main.o [1]
+  .text     ro code   0x800'0064     0x4  exit.o [2]
+  .text     ro code   0x800'0068     0xa  cexit.o [3]
+  .text     ro code   0x800'0072    0x12  stm32f10x_it.o [1]
+  .text     ro code   0x800'0084    0x14  exit.o [4]
+  .text     ro code   0x800'0098     0xc  cstartup_M.o [3]
+                    - 0x800'00a4    0x64
+
+"P2":                             0x1000
+  CSTACK             0x2000'0000  0x1000  <Block>
+    CSTACK  uninit   0x2000'0000  0x1000  <Block tail>
+                   - 0x2000'1000  0x1000
+
+Unused ranges:
+
+         From           To      Size
+         ----           --      ----
+   0x800'00a4   0x807'ffff  0x7'ff5c
+  0x2000'1000  0x2000'ffff    0xf000
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module            ro code  rw data
+    ------            -------  -------
+command line/config:
+    ----------------------------------
+    Total:
+
+D:\WorkSpace\IARARMWorkspace\0305SimpleF1Project\Debug\Obj: [1]
+    main.o                  2
+    stm32f10x_it.o         18
+    ----------------------------------
+    Total:                 20
+
+dl7M_tln.a: [2]
+    exit.o                  4
+    low_level_init.o        4
+    ----------------------------------
+    Total:                  8
+
+rt7M_tl.a: [3]
+    cexit.o                10
+    cmain.o                30
+    cstartup_M.o           12
+    vector_table_M.o       64
+    ----------------------------------
+    Total:                116
+
+shb_l.a: [4]
+    exit.o                 20
+    ----------------------------------
+    Total:                 20
+
+    Linker created               4 096
+--------------------------------------
+    Grand Total:          164    4 096
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                     Address  Size  Type      Object
+-----                     -------  ----  ----      ------
+?main                  0x800'0041        Code  Gb  cmain.o [3]
+BusFault_Handler       0x800'0079   0x2  Code  Gb  stm32f10x_it.o [1]
+CSTACK$$Base          0x2000'0000         --   Gb  - Linker created -
+CSTACK$$Limit         0x2000'1000         --   Gb  - Linker created -
+DebugMon_Handler       0x800'007f   0x2  Code  Gb  stm32f10x_it.o [1]
+HardFault_Handler      0x800'0075   0x2  Code  Gb  stm32f10x_it.o [1]
+MemManage_Handler      0x800'0077   0x2  Code  Gb  stm32f10x_it.o [1]
+NMI_Handler            0x800'0073   0x2  Code  Gb  stm32f10x_it.o [1]
+PendSV_Handler         0x800'0081   0x2  Code  Gb  stm32f10x_it.o [1]
+Region$$Table$$Base           0x0         --   Gb  - Linker created -
+Region$$Table$$Limit          0x0         --   Gb  - Linker created -
+SVC_Handler            0x800'007d   0x2  Code  Gb  stm32f10x_it.o [1]
+SysTick_Handler        0x800'0083   0x2  Code  Gb  stm32f10x_it.o [1]
+UsageFault_Handler     0x800'007b   0x2  Code  Gb  stm32f10x_it.o [1]
+__cmain                0x800'0041        Code  Gb  cmain.o [3]
+__exit                 0x800'0085  0x14  Code  Gb  exit.o [4]
+__iar_program_start    0x800'0099        Code  Gb  cstartup_M.o [3]
+__low_level_init       0x800'005f   0x4  Code  Gb  low_level_init.o [2]
+__vector_table         0x800'0000        Data  Gb  vector_table_M.o [3]
+_call_main             0x800'004d        Code  Gb  cmain.o [3]
+_exit                  0x800'0069        Code  Gb  cexit.o [3]
+_main                  0x800'005b        Code  Gb  cmain.o [3]
+exit                   0x800'0065   0x4  Code  Gb  exit.o [2]
+main                   0x800'0063   0x2  Code  Gb  main.o [1]
+
+
+[1] = D:\WorkSpace\IARARMWorkspace\0305SimpleF1Project\Debug\Obj
+[2] = dl7M_tln.a
+[3] = rt7M_tl.a
+[4] = shb_l.a
+
+    164 bytes of readonly  code memory
+  4 096 bytes of readwrite data memory
+
+Errors: none
+Warnings: none

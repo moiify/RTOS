@@ -1,0 +1,15 @@
+"E:\Program Files (x86)\IAR Systems\Embedded Workbench 7.2\arm\bin\armproc.dll" 
+
+"E:\Program Files (x86)\IAR Systems\Embedded Workbench 7.2\arm\bin\armjlink.dll" 
+
+"D:\WorkSpace\IARARMWorkspace\0305SimpleF1Project\Components\STM32F10x_StdPeriph_Template\EWARM\STM32100B-EVAL\Exe\Project.out" 
+
+--plugin "E:\Program Files (x86)\IAR Systems\Embedded Workbench 7.2\arm\bin\armbat.dll" 
+
+--device_macro "E:\Program Files (x86)\IAR Systems\Embedded Workbench 7.2\arm\config\debugger\ST\STM32F1xx.dmac" 
+
+--flash_loader "E:\Program Files (x86)\IAR Systems\Embedded Workbench 7.2\arm\config\flashloader\ST\FlashSTM32F100xB.board" 
+
+
+
+
